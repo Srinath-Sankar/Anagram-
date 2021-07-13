@@ -1,20 +1,20 @@
 package String.Check;
 public class CheckAnagram {
-    void AnagramorNot(String A,String B){
-        int len=A.length();
-        int len1=B.length();
-        char[]C=A.toCharArray();
-        char[]D=B.toCharArray();
+    void AnagramorNot(String string1,String string2){
+        int len=string1.length();
+        int len1=string2.length();
+        char[]array1=string1.toCharArray();
+        char[]array2=string2.toCharArray();
         int count=0,count1=0;
-        for(int i=0;i<A.length();i++){
-            if(C[i]==' '){
+        for(int i=0;i<string1.length();i++){
+            if(array1[i]==' '){
                 len--; 
             }
-            if(C[i]!=' '){
-                for(int j=0;j<B.length();j++){
-                    if(D[j]!=' '){
-                        if(C[i]==D[j]){
-                            D[j]='$';
+            if(array1[i]!=' '){
+                for(int j=0;j<string1.length();j++){
+                    if(array2[j]!=' '){
+                        if(array1[i]==array2[j]){
+                            array2[j]='$';
                             count++;
                             break;
                         }
@@ -22,8 +22,8 @@ public class CheckAnagram {
                 }
             }
         }
-        for(int j=0;j<B.length();j++){
-                 if(D[j]=='$'||D[j]==' '){
+        for(int j=0;j<string2.length();j++){
+                 if(array2[j]=='$'||array2[j]==' '){
                     count1++;
                  }
         }
