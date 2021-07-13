@@ -6,15 +6,15 @@ public class CheckAnagram {
         char[]array1=string1.toCharArray();
         char[]array2=string2.toCharArray();
         int count=0,count1=0;
-        for(int i=0;i<string1.length();i++){
-            if(array1[i]==' '){
+        for(int iterator=0;iterator<string1.length();iterator++){
+            if(array1[iterator]==' '){
                 len--; 
             }
-            if(array1[i]!=' '){
-                for(int j=0;j<string1.length();j++){
-                    if(array2[j]!=' '){
-                        if(array1[i]==array2[j]){
-                            array2[j]='$';
+            if(array1[iterator]!=' '){
+                for(int iterator1=0;iterator1<string1.length();iterator1++){
+                    if(array2[iterator1]!=' '){
+                        if(array1[iterator]==array2[iterator1]){
+                            array2[iterator1]='$';
                             count++;
                             break;
                         }
@@ -22,8 +22,8 @@ public class CheckAnagram {
                 }
             }
         }
-        for(int j=0;j<string2.length();j++){
-                 if(array2[j]=='$'||array2[j]==' '){
+        for(int iterator1=0;iterator1<string2.length();iterator1++){
+                 if(array2[iterator1]=='$'||array2[iterator1]==' '){
                     count1++;
                  }
         }
